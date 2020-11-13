@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/food_wallpaper_main"
+    tools:context=".MainActivity.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/alegreya_sans_sc_medium"
+        android:text="EzyFoody"
+        android:textSize="42sp"
+        android:textColor="@color/white"
+        android:padding="15dp"
+        android:background="@drawable/bg_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/amOrderButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="sans-serif-smallcaps"
+        android:onClick="goToMyOrder"
+        android:padding="15dp"
+        android:text="My Order"
+        android:textSize="20dp"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/drinksButton"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:onClick="goToDrinks"
+        android:padding="15dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/card_bg"
+        app:layout_constraintBottom_toTopOf="@+id/foodButton"
+        app:layout_constraintEnd_toStartOf="@+id/snackButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/ic_drinks_svgrepo_com" />
+
+    <ImageButton
+        android:id="@+id/foodButton"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:onClick="goToFoods"
+        android:padding="15dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/sage_rounded_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/drinksButton"
+        app:srcCompat="@drawable/ic_chinese_food_svgrepo_com" />
+
+    <ImageButton
+        android:id="@+id/snackButton"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:onClick="goToSnacks"
+        android:padding="15dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/sage_rounded_border"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/drinksButton"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/ic_salty_snack_svgrepo_com" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:onClick="goTopUp"
+        android:padding="15dp"
+        android:scaleType="fitCenter"
+        android:background="@drawable/card_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/foodButton"
+        app:layout_constraintTop_toBottomOf="@+id/snackButton"
+        app:srcCompat="@drawable/ic_atm_svgrepo_com" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
